@@ -4,6 +4,14 @@ main:
     url: https://maximsungmo.github.io
   - title: "About"
     url: /about/
+  - title: "Spring"
+    url: /spring/
+  - title: "Linux"
+    url: /linux/
+  - title: "Docker"
+    url: /docker/
+  - title: "TIL"
+    url: /TIL/
   - title: "카테고리"
     url: /categories/
   - title: "태그"
