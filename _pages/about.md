@@ -14,4 +14,4 @@ layout: single
 
 Maxim, 넌 할 수 있다!
 
-<https://maximsungmo.github.io.com>
+<https://maximsungmo.github.io>
