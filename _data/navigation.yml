@@ -2,5 +2,9 @@
 main:
   - title: "HOME"
     url: https://maximsungmo.github.io
-   - title: "About"
-     url: /about/
+  - title: "About"
+    url: /about/
+  - title: "카테고리"
+    url: /categories/
+  - title: "태그"
+    url: /tags/
