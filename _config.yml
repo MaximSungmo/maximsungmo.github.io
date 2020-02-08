@@ -115,10 +115,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:sunrise5318@email.com
+      url: mailto:sunrise5318@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-       url: "https://maximsungmo.github.io/"
+      url: "https://maximsungmo.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -127,7 +127,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/MaximSungmo"
+      url: "https://github.com/MaximSungmo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
