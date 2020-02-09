@@ -1,6 +1,6 @@
 ---
-title:  "[Jenkins] Google Cloud Platform에 연결하기"
-excerpt: "GitHub github.io 블로그 계획."
+title:  "[Jenkins] Google Cloud Platform에 연결하기(1)"
+excerpt: "Jenkins로 GCP 연결하기(1)"
 toc: true
 toc_sticky: true
 header:
