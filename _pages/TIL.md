@@ -1,7 +1,7 @@
 ---
 title: "Today I learned"
 permalink: /categories/TIL/
-layout: category
+layout: categories
 author_profile: true
 taxonomy: TIL
 ---

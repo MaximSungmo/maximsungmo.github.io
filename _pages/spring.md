@@ -1,7 +1,7 @@
 ---
 title: "Spring"
 permalink: /categories/spring/
-layout: category
+layout: categories
 author_profile: true
 taxonomy: spring
 ---
