@@ -5,13 +5,13 @@ main:
   - title: "About"
     url: /about/
   - title: "Spring"
-    url: /spring/
+    url: /categories/spring/
   - title: "Linux"
-    url: /linux/
+    url: /categories/linux/
   - title: "Docker"
-    url: /docker/
+    url: /categories/docker/
   - title: "TIL"
-    url: /TIL/
+    url: /categories/TIL/
   - title: "카테고리"
     url: /categories/
   - title: "태그"
