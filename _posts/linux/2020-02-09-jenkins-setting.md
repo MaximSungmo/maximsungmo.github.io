@@ -1,4 +1,4 @@
-```
+---
 title:  "[Jenkins] Google Cloud Platform에 연결하기"
 excerpt: "GitHub github.io 블로그 계획."
 toc: true
@@ -11,7 +11,7 @@ categories:
 tags:
   - Linux, Jenkins, GCP
 last_modified_at: 2020-02-09T14:06:00-05:00
-```
+---
 
 
 
@@ -25,7 +25,7 @@ last_modified_at: 2020-02-09T14:06:00-05:00
 
 - 방화벽 규칙 설정 클릭 
 
-![image-20200209121553175](C:\Users\Sungmo Kim\Desktop\git\minimal-mistakes\assets\images\image-20200209121553175.png)
+![image-20200209121553175](\assets\images\image-20200209121553175.png)
 
 - 방화벽 규칙 만들기 클릭 
 
