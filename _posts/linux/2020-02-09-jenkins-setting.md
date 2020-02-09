@@ -7,9 +7,11 @@ header:
   teaser: /assets/images/bio-photo-keyboard-teaser.jpg
 
 categories:
-  - Linux
+  - linux
 tags:
-  - Linux, Jenkins, GCP
+  - linux
+  - Jenkins
+  - GCP
 last_modified_at: 2020-02-09T14:06:00-05:00
 ---
 
