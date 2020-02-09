@@ -1,4 +1,21 @@
-# Google Cloud Platform 을 활용한 Jenkins 설정 방법
+```
+title:  "[Jenkins] Google Cloud Platform에 연결하기"
+excerpt: "GitHub github.io 블로그 계획."
+toc: true
+toc_sticky: true
+header:
+  teaser: /assets/images/bio-photo-keyboard-teaser.jpg
+
+categories:
+  - Linux
+tags:
+  - Linux, Jenkins, GCP
+last_modified_at: 2020-02-09T14:06:00-05:00
+```
+
+
+
+# [Jenkins] Google Cloud Platform에 연결하기
 
 
 
