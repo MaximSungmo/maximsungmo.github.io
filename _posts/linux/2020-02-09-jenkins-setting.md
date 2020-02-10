@@ -114,3 +114,6 @@ Configure System 을 클릭한 뒤 [Github] 에 대한 내용을 add 시킨다.
 ![image-20200209121245482](../../assets/images/image-20200209121245482.png)
 
 
+참고자료 : 
+<https://kutar37.tistory.com/entry/Jenkins-Github-%EC%97%B0%EB%8F%99-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-3>
+

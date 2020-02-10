@@ -45,6 +45,12 @@ Step 3에서는 `Team Subdomain` 과 `Integration Token Credential ID` 을 발�
 
 ![image-20200210003257909](../../assets/images/image-20200210003257909.png)
 
+![image-20200210003407921](../../assets/images/image-20200210003407921.png)
+
+
+
+![image-20200210003451689](../../assets/images/image-20200210003451689.png)
+
 
 
 출처 : 
