@@ -1,5 +1,5 @@
 ---
-title:  "[Jenkins] Google Cloud Platform에 연결하기(2)"
+title:  "[Jenkins] Google Cloud Platform에 연결하기(3)"
 excerpt: "Jenkins 명령어로 컨테이너 실행시키기"
 toc: true
 toc_sticky: true
