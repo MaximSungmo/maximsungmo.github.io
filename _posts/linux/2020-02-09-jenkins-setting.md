@@ -1,42 +1,24 @@
 ---
-title:  "[Jenkins] Google Cloud Platform에 연결하기(1)"
-excerpt: "Jenkins로 GCP 연결하기(1)"
+title:  "[Cloud] Google Cloud Platform에 연결하기(1)"
+excerpt: "Jenkins에 Job 만들기"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/bio-photo-keyboard-teaser.jpg
+  teaser: /assets/images/jenkins_main_image.jpg
 
 categories:
   - linux
 tags:
   - linux
-  - Jenkins
+  - jenkins
+  - docker
   - GCP
-last_modified_at: 2020-02-09T14:06:00-05:00
+last_modified_at: 2020-02-16T18:06:00-05:00
 ---
 
 
-# [Jenkins] Google Cloud Platform에 연결하기
 
-
-
-## 1. 방화벽 확인 및 해제 
-
-![image-20200209121245482](../../assets/images/image-20200209121245482.png)
-
-- 방화벽 규칙 설정 클릭 
-
-![image-20200209121553175](../../assets/images/image-20200209121553175.png)
-
-- 방화벽 규칙 만들기 클릭 
-
-![image-20200209121627405](../../assets/images/image-20200209121627405.png)
-
-- 포트 tcp:에 지정해서 만들기 (Jenkins 는 별도의 포트만으로 분리해서 관리 예정)
-
-
-
-## 2. Jenkins 접속 
+## 1. Jenkins 에 Job만들기
 
 http://{ip주소}:{포트번호} 로 접속하면 다음의 화면이 나타난다.
 
@@ -48,70 +30,93 @@ http://{ip주소}:{포트번호} 로 접속하면 다음의 화면이 나타난�
 
 ![image-20200209122452782](../../assets/images/image-20200209122452782.png)
 
-- Freestyle project 생성 
+- Freestyle project 생성
 
 ![image-20200209122430339](../../assets/images/image-20200209122430339.png)
 
-### github 계정 jenkins와 연동 
-
-![image-20200209123801791](../../assets/images/image-20200209123801791.png)
-
-다음으로 Persnal access token 을 받아보기 위하여 Generate new token을 클릭한다.
-
-![image-20200209123931255](../../assets/images/image-20200209123931255.png)
 
 
 
-아래와 같이 repo와 admin:repo_hook 을 체크한 뒤 생성한다.
 
-![image-20200209124210124](../../assets/images/image-20200209124210124.png)
+#### github 프로젝트 jenkins와 연동 
 
-이 작업을 통해 secret key를 발급받게 되었다.
+Github 프로젝트와 Jenkins를 연동하기 위하여 다음의 위치에 .ssh 디렉토리를 만든다.
 
-이제 Jenkins에서 github 계정과 연결을 해보자.
+![image-20200216191033909](../../assets/images/image-20200216191033909.png)
 
-![image-20200209124637933](../../assets/images/image-20200209124637933.png)
-
-Configure System 을 클릭한 뒤 [Github] 에 대한 내용을 add 시킨다.
-
-![image-20200209124932734](../../assets/images/image-20200209124932734.png)
-
-~~위에서 받았던 secret key를 입력할 수 있도록 하단의 화면처럼 셋팅한다.~~
-
-~~Secret 에는 github에서 받았던 secret Key를, ID 에는 github username을 작성한 뒤 add 하고 test connection 이 정상적으로 되는 지 확인한다.~~
-
-![image-20200209125007917](../../assets/images/image-20200209125007917.png)
-
-이상하게도 위의 작업으로 credentials 이 제대로 생성되지 않았다. 
-
-다음의 작업으로 대체한다.
-
-![image-20200209130545491](../../assets/images/image-20200209130545491.png)
-
-이제 위의 작업으로 인해 Credentials 이 생성되었다. 
-
-![image-20200209130447665](../../assets/images/image-20200209130447665.png)
-
-아직 셋팅이 조금 더 남았으니 아래로 가보자
-
-![image-20200209130633234](../../assets/images/image-20200209130633234.png)
-
-- Build Trggers 에서 셋팅을 다음과 같이 추가해준다. 
-
-![image-20200209130703354](../../assets/images/image-20200209130703354.png)
-
-- Build 발생시의 트리거에 대한 script를 다음과 같이 간단하게 작업한다. 
+```
+mkdir ./ssh
+```
 
 
 
-### github 브랜치 설정, trigger 연동
+이제 ssh key를 만들어보자.
 
-우선은 테스트를 위한 작업이므로 git에 브랜치 하나를 생성하고 오도록 하자.
+```
+ssh-keygen -t rsa -f /home/sunrise5318/.ssh/github-test
+```
 
-![image-20200209122745372](../../assets/images/image-20200209122745372.png)
+제대로 생성되었는 지 확인하기 위하여 해당 폴더로 이동한 뒤 다음의 명령어를 입력한다.
 
-![image-20200209121245482](../../assets/images/image-20200209121245482.png)
+```
+ls -al
+```
+
+![image-20200216191320197](../../assets/images/image-20200216191320197.png)
 
 
-참고자료 : 
+
+이제 github 프로젝트로 이동해서 `setting`으로 들어간다. 
+
+`deploy keys` -> `add deploy key` 를 클릭한다. 
+
+![image-20200216191631080](../../assets/images/image-20200216191631080.png)
+
+key 는 생성된 ssh key 중 뒤에 .pub 이 붙은 것을 확인하면 된다.
+
+```
+cat github-test.pub
+```
+
+
+
+완료가 되면 다음과 같은 화면을 볼 수 있다.
+
+![image-20200216191819271](../../assets/images/image-20200216191819271.png)
+
+
+
+이제 다시 Jenkins manage page로 접속해서 해당 프로젝트의 credentials 을 등록한다.
+
+![image-20200216192023356](../../assets/images/image-20200216192023356.png)
+
+
+
+
+
+![image-20200216192128008](../../assets/images/image-20200216192128008.png)
+
+이제 모두 등록이 되었으므로 Project 생성을 이어나가보자.
+
+
+
+![image-20200216192842977](../../assets/images/image-20200216192842977.png)
+
+![image-20200216192903644](../../assets/images/image-20200216192903644.png)
+
+![image-20200216192922761](../../assets/images/image-20200216192922761.png)
+
+![image-20200216192939062](../../assets/images/image-20200216192939062.png)
+
+
+
+
+
+
+
+reference : 
 <https://kutar37.tistory.com/entry/Jenkins-Github-%EC%97%B0%EB%8F%99-%EC%9E%90%EB%8F%99%EB%B0%B0%ED%8F%AC-3>
+
+
+
+https://jojoldu.tistory.com/442
