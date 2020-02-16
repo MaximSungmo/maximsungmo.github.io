@@ -1,5 +1,5 @@
 ---
-title:  "[Jenkins] Jenkins 셋팅하기(3) - Pipeline 설정하기"
+title:  "[Jenkins] Jenkins 셋팅하기(4) - Pipeline 설정하기"
 excerpt: "Pipeline 설정으로 단계별 작업 내용 확인하기"
 toc: true
 toc_sticky: true
