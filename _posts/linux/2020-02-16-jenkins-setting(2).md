@@ -1,24 +1,20 @@
 ---
-title:  "[Jenkins] Google Cloud Platform에 연결하기(2)"
-excerpt: "Jenkins로 GCP 연결하기(2)"
+title:  "[Jenkins] Jenkins 셋팅하기(2) - slack 연동"
+excerpt: "Jenkins에 Slack 연동하여 알람받기"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/bio-photo-keyboard-teaser.jpg
+  teaser: /assets/images/jenkins_main_image.jpg
 
 categories:
   - linux
 tags:
   - linux
-  - Jenkins
+  - jenkins
+  - docker
   - GCP
-last_modified_at: 2020-02-09T23:06:00-05:00
+last_modified_at: 2020-02-16T20:00:00-05:00
 ---
-
-
-
-# [Jenkins] Google Cloud Platform에 연결하기(2)
-
 
 
 ## Slack에 연결하여 Jenkins 알람 받기
@@ -39,8 +35,6 @@ Step 3에서는 `Team Subdomain` 과 `Integration Token Credential ID` 을 발�
 
 `컨트롤 + F` 를 눌러 Slack 을 찾은 후 
 
-
-
 ![image-20200210002947949](../../assets/images/image-20200210002947949.png)
 
 ![image-20200210003257909](../../assets/images/image-20200210003257909.png)
@@ -53,6 +47,6 @@ Step 3에서는 `Team Subdomain` 과 `Integration Token Credential ID` 을 발�
 
 
 
-출처 : 
+reference : 
 
-https://jojoldu.tistory.com/139
+[docker를 이용한 CI 구축 연습하기 (젠킨스, 슬랙)](https://jojoldu.tistory.com/139)

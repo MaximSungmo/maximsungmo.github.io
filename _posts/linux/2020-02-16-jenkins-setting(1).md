@@ -1,6 +1,6 @@
 ---
-title:  "[Jenkins] Jenkins 셋팅하기(1)"
-excerpt: "Jenkins에 Job 만들기"
+title:  "[Jenkins] Jenkins 셋팅하기(1) - Project 생성, Webhook 설정"
+excerpt: "Jenkins에 Project 생성하고 자동배포를 위한 Webhook 설정하기"
 toc: true
 toc_sticky: true
 header:
