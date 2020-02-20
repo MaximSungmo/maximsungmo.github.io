@@ -22,7 +22,9 @@ last_modified_at: 2020-02-21T08:00:00-05:00
 
 이런 문제를 해결할 수 있는 방법을 소개해드립니다.
 
-## 해결방법 1
+## 해결방법
+
+### 해결방법 1
 
 ```
 [Alt + Space 키] + [방향 키]
@@ -33,6 +35,7 @@ last_modified_at: 2020-02-21T08:00:00-05:00
 
 ![Alt+Space](../../assets/images/Alt+Space.jpg)
 
+### 해결방법2 
 ```
 [Windows키 + p] -> 확장(Extend)선택 -> [Windows키 + Shift키 + 방향키]
 ```
