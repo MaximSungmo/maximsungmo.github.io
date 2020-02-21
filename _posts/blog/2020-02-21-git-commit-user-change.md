@@ -162,7 +162,7 @@ git push --force --tags origin 'refs/heads/master'
 
 근데 다시 작업을 진행하려고 동일한 코드를 치니 에러가 발생했다.
 
-![1582276652152](assets/images/1582276652152.png){: .align-center}
+![1582276652152](../../assets/images/1582276652152.png){: .align-center}
 
 
 
