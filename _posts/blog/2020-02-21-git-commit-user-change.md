@@ -98,7 +98,7 @@ $ git config --global user.email "John Doe"
 
 우선 `github` 에 들어가서 어떤 계정으로 커밋이 되었는 지 확인한다.
 
-![1582276103501](assets/images/1582276103501.png){: .align-center}
+![1582276103501](../../assets/images/1582276103501.png){: .align-center}
 
 총 3개의 계정으로 commit 이 진행된 것을 확인할 수 있다.
 
