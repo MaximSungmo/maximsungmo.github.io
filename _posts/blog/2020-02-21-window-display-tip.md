@@ -32,9 +32,9 @@ last_modified_at: 2020-02-21T08:00:00-05:00
 
 -> Alt + Space 키를 누르면 아래와 같은 작은 창이 뜹니다. 
 그 중 M에 해당하는 이동(M)을 선택해서 방향키로 화면을 벗어난 프로그램창을 가져오는 방법입니다.
-<p align="center">
-![Alt+Space](../../assets/images/Alt+Space.jpg)
-</p>
+
+![Alt+Space](../../assets/images/Alt+Space.jpg){: .align-center}
+
 ### 해결방법2 
 ```
 [Windows키 + p] -> 확장(Extend)선택 -> [Windows키 + Shift키 + 방향키]
