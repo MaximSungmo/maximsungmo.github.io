@@ -19,15 +19,15 @@ last_modified_at: 2020-02-16T20:00:00-05:00
 
 ## Slack에 연결하여 Jenkins 알람 받기
 
-![image-20200209235731793](../../assets/images/image-20200209235731793.png)
+![image-20200209235731793](../../assets/images/image-20200209235731793.png){: .align-center}
 
 다음과 같이 Add more apps -> Jenkins CI 검색 -> Add to Slack 을 해준다.
 
-![image-20200209235858100](../../assets/images/image-20200209235858100.png)
+![image-20200209235858100](../../assets/images/image-20200209235858100.png){: .align-center}
 
 이제 Add Jenkins CI integration을 클릭하면 다음의 설명이 나오는데, Step1, Step2 는 그대로 따라한다.
 
-![image-20200210000633148](../../assets/images/image-20200210000633148.png)
+![image-20200210000633148](../../assets/images/image-20200210000633148.png){: .align-center}
 
 Step 3에서는 `Team Subdomain` 과 `Integration Token Credential ID` 을 발급해주는 데 따로 기록해놓도록 한다.
 
@@ -35,15 +35,13 @@ Step 3에서는 `Team Subdomain` 과 `Integration Token Credential ID` 을 발�
 
 `컨트롤 + F` 를 눌러 Slack 을 찾은 후 
 
-![image-20200210002947949](../../assets/images/image-20200210002947949.png)
+![image-20200210002947949](../../assets/images/image-20200210002947949.png){: .align-center}
 
-![image-20200210003257909](../../assets/images/image-20200210003257909.png)
+![image-20200210003257909](../../assets/images/image-20200210003257909.png){: .align-center}
 
-![image-20200210003407921](../../assets/images/image-20200210003407921.png)
+![image-20200210003407921](../../assets/images/image-20200210003407921.png){: .align-center}
 
-
-
-![image-20200210003451689](../../assets/images/image-20200210003451689.png)
+![image-20200210003451689](../../assets/images/image-20200210003451689.png){: .align-center}
 
 
 

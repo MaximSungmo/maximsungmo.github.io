@@ -16,7 +16,7 @@ last_modified_at: 2020-02-16T16:00:00-05:00
 
 
 
-![1581638144131](../../assets/images/1581638144131.png)
+![1581638144131](../../assets/images/1581638144131.png){: .align-center}
 
 
 
@@ -30,7 +30,7 @@ last_modified_at: 2020-02-16T16:00:00-05:00
 
 ## 1. VM인스턴스에 접속하기 
 
-![image-20200216154520593](../../assets/images/image-20200216154520593.png)
+![image-20200216154520593](../../assets/images/image-20200216154520593.png){: .align-center}
 
 위와 같이 `브라우저 창에서 열기` 버튼을 눌러 VM 인스턴스를 실행시켜보자.
 
@@ -70,7 +70,7 @@ sudo yum remove docker docker-common docker-selinux docker-engine
 
 본인의 경우에는 다음의 메세지가 출력되었다. (이 전에 설치된 적이 없는 상황)
 
-![image-20200216160232973](../../assets/images/image-20200216160232973.png)
+![image-20200216160232973](../../assets/images/image-20200216160232973.png){: .align-center}
 
 
 
@@ -110,7 +110,7 @@ sudo docker run --rm hello-world
 
 어? `docker` 가 제대로 실행되지 않네 ?
 
-![image-20200216163807381](../../assets/images/image-20200216163807381.png)
+![image-20200216163807381](../../assets/images/image-20200216163807381.png){: .align-center}
 
 에러가 발생한 것을 확인할 수 있다.
 
@@ -128,7 +128,7 @@ sudo systemctl start docker
 sudo docker run --rm hello-world
 ```
 
-![image-20200216164532983](../../assets/images/image-20200216164532983.png)
+![image-20200216164532983](../../assets/images/image-20200216164532983.png){: .align-center}
 
 
 
@@ -161,7 +161,7 @@ ls -al
 
 
 
-![image-20200216164831353](../../assets/images/image-20200216164831353.png)
+![image-20200216164831353](../../assets/images/image-20200216164831353.png){: .align-center}
 
 `docker.sock` 파일은 docker 그룹으로 구분되어 있는 것을 확인할 수 있고 공용에서의 권한은 0으로 아무것도 할 수 없다는 것을 알 수 있다. 이는 추후 컨테이너 구성에 중요한 포인트가 되므로 우선 알고 있도록 하자.
 
