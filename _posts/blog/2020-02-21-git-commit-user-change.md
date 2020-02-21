@@ -148,13 +148,13 @@ git push --force --tags origin 'refs/heads/master'
 
 출처 : [깃(Git) 커미터(Committer) 이름 변경하는 방법](https://ndb796.tistory.com/265)
 
-![1582276513360](assets/images/1582276513360.png){: .align-center}
+![1582276513360](../../assets/images/1582276513360.png){: .align-center}
 
 짜잔 ! 
 
 정확하게 바뀐 모습을 확인할 수 있다. 
 
-![1582276362731](assets/images/1582276362731.png){: .align-center}
+![1582276362731](../../assets/images/1582276362731.png){: .align-center}
 
 단, 나의 경우 3개의 계정이 있었고 2개의 계정을 바꿔줘야 했으므로 2번의 반복하여 진행해야 했다. 
 
