@@ -49,19 +49,6 @@ git config user.name
 git config user.email
 ```
 
-
-
-이 외에도 global 설정을 변경하는 방법도 있으니 참고하길 바란다.
-
-- git config 를 global로 설정하는 방법 
-
-```
-$ git config --global user.name "John Doe"
-$ git config --global user.email "John Doe"
-```
-
-
-
 ---
 
 ## 해결방법
@@ -86,8 +73,17 @@ $ git config --global user.email "John Doe"
     name = MaximSungmo
 ```
 
-이제 다시 `git config user.name` 으로 확인하면 해당 폴더의 프로젝트는 내가 설정한 유저로 국소 적용된 것을 확인할 수 있다. 
+이제 다시 `git config user.name` 으로 확인하면 해당 폴더의 프로젝트는 내가 설정한 유저로 국소 적용된 것을 확인할 수 있다.
 
+이 외에도 global 설정을 변경하는 방법도 있으니 참고하길 바란다.
+
+- git config 를 global로 설정하는 방법 
+
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email "John Doe"
+```
+ 
 ---
 
 ## github 저장소 수정
