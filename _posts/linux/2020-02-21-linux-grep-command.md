@@ -4,7 +4,7 @@ excerpt: "Linux 내 파일, 폴더 찾기"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/x.jpg
+  teaser: 
 
 categories:
   - linux
