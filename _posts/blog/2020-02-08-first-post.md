@@ -3,9 +3,9 @@ title: "github.io 블로그 시작하기"
 excerpt: "첫 시작"
 
 categories:
-    - Blog
+    - blog
 tags:
-    - Blog
+    - blog
 
 last_modified_at : 2020-02-08T23:00:00-00:00
 
