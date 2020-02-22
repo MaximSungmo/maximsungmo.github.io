@@ -12,7 +12,7 @@ tags:
   - ide  
 last_modified_at: 2020-02-19T13:00:00-05:00
 ---
-![github](assets/images/github.png){: .align-center}
+![github](../../assets/images/github.png){: .align-center}
 
 ## 상황인식
 
@@ -94,7 +94,7 @@ $ git config --global user.email "John Doe"
 
 우선 `github` 에 들어가서 어떤 계정으로 커밋이 되었는 지 확인한다.
 
-![1582276103501](assets/images/1582276103501.png){: .align-center}
+![1582276103501](../../assets/images/1582276103501.png){: .align-center}
 
 총 3개의 계정으로 commit 이 진행된 것을 확인할 수 있다.
 
@@ -144,13 +144,13 @@ git push --force --tags origin 'refs/heads/master'
 
 출처 : [깃(Git) 커미터(Committer) 이름 변경하는 방법](https://ndb796.tistory.com/265)
 
-![1582276513360](assets/images/1582276513360.png){: .align-center}
+![1582276513360](../../assets/images/1582276513360.png){: .align-center}
 
 짜잔 ! 
 
 정확하게 바뀐 모습을 확인할 수 있다. 
 
-![1582276362731](assets/images/1582276362731.png){: .align-center}
+![1582276362731](../../assets/images/1582276362731.png){: .align-center}
 
 단, 나의 경우 3개의 계정이 있었고 2개의 계정을 바꿔줘야 했으므로 2번의 반복하여 진행해야 했다. 
 
@@ -158,7 +158,7 @@ git push --force --tags origin 'refs/heads/master'
 
 근데 다시 작업을 진행하려고 동일한 코드를 치니 에러가 발생했다.
 
-![1582276652152](assets/images/1582276652152.png){: .align-center}
+![1582276652152](../../assets/images/1582276652152.png){: .align-center}
 
 
 
