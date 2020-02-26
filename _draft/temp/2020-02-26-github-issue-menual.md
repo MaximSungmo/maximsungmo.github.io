@@ -27,6 +27,8 @@ Github repository를 보면 코드를 보여주는 코드탭을 기본적으로 
 
 ![1582672699951](../../assets/images/1582672699951.png){: .align-center}
 
+
+
 ### Issue 발행하기
 
 `New Issue` 버튼을 누르면 다음의 화면이 나타나게 되고 `issue`를 등록할 수 있다.
@@ -43,10 +45,12 @@ Github repository를 보면 코드를 보여주는 코드탭을 기본적으로 
 - Estimate - 작업 완료까지의 추정 시간을 정할 수 있다.
 - Epics  - 해당 작업이 (Epic로 생성된 이슈 중) 어느 이슈의 하위에 속하는 지 정할 수 있다. 
 
-#### Milestone 생성
+
+
+- ####  Milestone 생성
 
 `Issue` 를 생성하다보니 사이드탭에 `Milestone`이 있다.
- 
+
 쉽게 생각하면 프로젝트 일정을 관리하는 단위 작업이라고 볼 수 있다.
 
 예를 들어서 1.0.1 버전에서 1.0.2 버전으로 배포 예정인 상황인데, 필수 버그 개선이 1.0.2 버전에 포함되어서 나가야 한다면 해당 작업에 대해서는 1.0.2버전을 `Milestone` 으로 지정하여 작업하면 된다.
@@ -54,23 +58,30 @@ Github repository를 보면 코드를 보여주는 코드탭을 기본적으로 
 생성 방법은 단순하다. 
 
 `Issue`탭에서 `Milestone` 을 누른다. 
+
 ![1582674303625](../../assets/images/1582674303625.png){: .align-center}
 
 이 후 생성하기를 누르면 다음과 같이 표시가 되며 어떤 작업 단위를 위한 `Milestone` 인 지 작성한다.
+
 ![1582674276895](../../assets/images/1582674276895.png){: .align-center}
 
 생성된 `Milestone`은 다음과 같이 확인할 수 있다. 
 동일 `Milestone`으로 설정된 경우에는 해당 단위 작업(`Milestone`)에 일정 관리 대상으로 포함된다.
+
 ![1582674322461](../../assets/images/1582674322461.png){: .align-center}
 
 이 후 이 전에 작성했던 이슈에서 `Milestone` 을 설정한다. 
+
 ![1582674441412](../../assets/images/1582674441412.png){: .align-center}
 
 이제 다시 `Issue`탭에서 `Milestone`으로 들어와서 해당 `Milestone`을 클릭해보면 방금 전에 추가한 작업이 `프로젝트 셋팅` 이라는 `Milestone`으로 포함된 것을 알 수 있다.
+
 ![1582674489890](../../assets/images/1582674489890.png){: .align-center}
 
 
-#### Epic 생성
+
+
+- #### Epic 생성
 
 위에서 설명한 `Milestone` 과 비슷하지만 조금 다른 개념으로 `Epic`이 있다.
 
@@ -80,34 +91,98 @@ Github repository를 보면 코드를 보여주는 코드탭을 기본적으로 
 
 이 모든게 완료가 되어야 `Database셋팅`이라는 `Issue` 가 close 될 수 있으므로 해당 작업은 하나의 큰 작업 단위인 `Epic`으로 묶는 것이다. 
 
-생성 방법은 `Issue`를 생성하는 것과 동일하지만 `Issue`를 생성하는 버튼이 아닌 `Create an epic`을 생성하는 버튼을 누른다.
+생성 방법은 `Issue`를 생성하는 것과 동일하지만 `Issue`를 생성하는 버튼이 아닌 `Create an epic`을 생성하는 버튼을 누른다. 
 
 물론 `Epic`을 `Labels` 로 지정하는 것도 동일한 `Epic` 생성 방법이다. 하지만 위의 기능으로 생성하면 여러가지 `Issue`를 묶을 수 있는 창을 확인할 수 있다. 
-  
-![1582674724188](../../assets/images/1582674724188.png)
+
+![1582674724188](../../assets/images/1582674724188.png){: .align-center}
 
 `Create an epic` 버튼을 누르면 아래와 같은 창이 보여지는데, 이 때 오른쪽 사이드에는 현재 프로젝트의 `Issue`들이 함께 나타나게 된다. 선택 상자를 클릭하면 해당 `Issue`는 현 `epic` 단위로 묶일 수 있다. 
 
-![1582674755806](../../assets/images/1582674755806.png)
+![1582674755806](../../assets/images/1582674755806.png){: .align-center}
 
 
 생성된 `Epic` 을 확인하면 다음과 같다. 이제 `Epic`은 `Issue`는 맞지만 큰 작업 단위의 `Issue`로 보면 된다.
-![1582674785461](../../assets/images/1582674785461.png)
+![1582674785461](../../assets/images/1582674785461.png){: .align-center}
 
 이 전에 만들었던 `Issue`에 `epic`을 지정해주어 보자.
 해당 `Issue`를 들어가서 사이드탭에 `Epics`를 클릭하면 다음과 같이 확인할 수 있을 것이다. 
-![1582674835630](../../assets/images/1582674835630.png)
+
+![1582674835630](../../assets/images/1582674835630.png){: .align-center}
 
 다시 `epic issue` 로 돌아와보면 `Epic`이 설정된 경우에는 해당 `epic issue`에서 하위 작업 목록이 나타나게 된다. 
-![1582674927433](../../assets/images/1582674927433.png)
+
+![1582674927433](../../assets/images/1582674927433.png){: .align-center}
 
 
 
 ### Issue template 만들기
 
+`Issue` 를 여러 사람이 올리게 되는 경우에는 일정한 형식에 맞지 않으면 가독성이나 원하는 정보가 누락되는 경우가 아주 많을 것이다. 또한 내가 작업할 때도 필요한 정보를 제대로 기입하지 못하는 일이 발생할 수 있다.
+
+그렇기 때문에 `issue` 의 종류에 따라서 Template을 별도로 만들어놓는 작업이 필요하다.
+
+`Settings` 에 들어가서 `Set up Templtaes` 를 선택한다. 
+
+![1582704352219](../../assets/images/1582704352219.png){: .align-center}
+
+
+
+다음과 같은 화면이 뜰 것인데, 새로 `Template`을 만들거나 기존 `Template`을 수정할 수 있다.
+
+
+
+![1582704474133](../../assets/images/1582704474133.png){: .align-center}
+
+
+
+우선은 기본적으로 `Bug report`를 수정하며 방법을 익혀보자.
+
+기존에 있던 내용을 지우고 `Markdown`을 적용하여 내가 원하는 `Template`을 만든 다음에 저장을 한다.
+
+![1582704520405](../../assets/images/1582704520405.png){: .align-center}
+
+
+
+저장은 우측 상단에 보면 `Propose changes` 라는 버튼이 있다. 
+
+![1582704589874](../../assets/images/1582704589874.png){: .align-center}
+
+
+
+해당 버튼을 눌러서 최종적으로 저장하면 앞으로는 `NEW ISSUSES`버튼을 클릭하면 다음과 같은 선택창이 나타나게 될 것이다.
+
+따라서 `Issue`를 작성하는 사람은 정해진 양식에 따라 발행할 수 있고 이를 확인하는 사람도 가독성과 원하는 정보를 쉽게 획득할 수 있게 된다. 
+
+![1582704639797](../../assets/images/1582704639797.png){: .align-center}
+
 
 
 ### Issue 를 IntelliJ 와 연동하기
+
+`Issue`를 `IntelliJ` 와 연동하여 앞으로는 `Issue`단위로 브랜치 작업하고 `Pull Request`를 통한 코드 리뷰 및 소스코드 통합 작업을 진행할 예정이다. 
+
+이를 진행하기에 앞서 우리들의 프로그래밍을 적극적으로 도와주는 IDE의 도움을 받아보자.
+
+나는 IntelliJ 를 사용하므로 이에 대한 설정법을 작성하겠다.
+
+
+
+우선은 `ALT + SHIFT + S` 버튼을 눌러 Settings 창을 열고 `Task`를 검색한다.
+
+그 후 내가 `Issue`를 받아올 github 주소를 확인하고 하단의 `Repository`에 정보를 입력한다. 
+
+![1582704948101](../../assets/images/1582704948101.png)
+
+그 후 나의 IDE가 github에서 정보를 받아올 수 있도록 API Token을 생성하도록 하자.
+
+`Create API Token` 을 누른 뒤 나의 정보를 입력하여 처리한다.
+
+![1582705070830](../../assets/images/1582705070830.png)
+
+이제 작업이 완료가 되었다 
+
+`ALT + SHIFT + N` 을 눌러 현재 발행된 `Issue`를 확인하고 나의 `Task`로 가져오도록 한다. 
 
 
 
