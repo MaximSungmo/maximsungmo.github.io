@@ -4,7 +4,7 @@ excerpt: "Github을 통한 협업 - issue와 Zenhub 사용법"
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/1582672699951.png
+  teaser: /assets/images/github.png
 
 categories:
   - TIL
@@ -172,21 +172,89 @@ Github repository를 보면 코드를 보여주는 코드탭을 기본적으로 
 
 그 후 내가 `Issue`를 받아올 github 주소를 확인하고 하단의 `Repository`에 정보를 입력한다. 
 
-![1582704948101](../../assets/images/1582704948101.png)
+![1582704948101](../../assets/images/1582704948101.png){: .align-center}
 
 그 후 나의 IDE가 github에서 정보를 받아올 수 있도록 API Token을 생성하도록 하자.
 
 `Create API Token` 을 누른 뒤 나의 정보를 입력하여 처리한다.
 
-![1582705070830](../../assets/images/1582705070830.png)
+![1582705070830](../../assets/images/1582705070830.png){: .align-center}
 
 이제 작업이 완료가 되었다 
 
 `ALT + SHIFT + N` 을 눌러 현재 발행된 `Issue`를 확인하고 나의 `Task`로 가져오도록 한다. 
 
+그럼 해당 이슈에 대한 로컬 브랜치가 새로 생성이 될 것이며 Task 별 작업이 가능해진다.
+
 
 
 ### 작업 완료 후 Pull Request
+
+모든 코드 수정이 완료가 되었으면 Task 단위로 생긴 로컬 브랜치에서 `Commit` 을 진행한다.
+
+![1582778169703](../../assets/images/1582778169703.png){: .align-center}
+
+
+
+그 후 `VCS -> GIT -> Create pull request` 를 실행한다. 
+
+![1582778314287](../../assets/images/1582778314287.png){: .align-center}
+
+
+
+다음의 화면이 나타나게 되는데, `resolved: #이슈번호` 를 작성하게 되면 해당 이슈가 끝났으므로 자동으로 pull request가 master branch로 merge 완료되면 해당 이슈를 자동으로 클로징 시켜준다. 만약 해당 이슈가 자동으로 클로징되는 것을 원하지 않으신다면 해당 이슈를 따라갈 수 있도록 `issue: #이슈번호` 를 작성해주시면 됩니다. 
+
+![1582778269607](../../assets/images/1582778269607.png){: .align-center}
+
+
+
+이제 IDE에서의 작업은 끝이났으므로 다시 Github 페이지로 들어갑니다.
+
+Pull Request가 뭐가 들어왔는 지 확인해보니 위에서 작업했던 게 들어온 것을 알 수 있습니다. 
+
+![1582778479428](../../assets/images/1582778479428.png){: .align-center}
+
+자세히 살펴보기 위해 클릭해봅시다.
+
+![1582778519832](../../assets/images/1582778519832.png){: .align-center}
+
+이제 Pull request를 받았으니 master branch로 합치기 전 코드리뷰 또는 내용 확인을 진행합니다.
+
+### 코드리뷰
+
+우선 내가 만약 팀장 또는 코드를 관리하는 사람이고 다른 곳에서 pull request가 들어온 경우에는 누군가에게 code review를 요청할 수 있습니다.
+
+![1582778728775](../../assets/images/1582778728775.png){: .align-center}
+
+코드리뷰를 요청하기 위한 대상자를 지정해봅시다. 
+
+이 후 코드 리뷰어가 해당 작업자가 코드를 제대로 작성했는 지 확인하기 위해서 코드를 확인하러 가봅시다.
+
+![1582778602641](../../assets/images/1582778602641.png){: .align-center}
+
+오른쪽 상단에 보시면 `Review changes` 를 클릭하게 되면 해당 코드에 대한 상세한 코멘트를 남길 수 있게 됩니다.
+
+![1582778783463](../../assets/images/1582778783463.png){: .align-center}
+
+
+
+![1582778830412](../../assets/images/1582778830412.png){: .align-center}
+
+따라서 해당 코드에 대한 리뷰를 다른 사람들과 함께 진행할 수 있게 되고 모든 코드리뷰가 완료가 되었습니다.
+
+### Merge pull request
+
+ Merge pull request을 통해서 master와 해당 이슈 브랜치가 통합될 수 있게 해줍니다.
+
+![1582778938291](../../assets/images/1582778938291.png){: .align-center}
+
+그리고 Merge도 정상적으로 완료가 되었으면 해당 브랜치가 로컬 브랜치에서 생성되어 원격지로 푸쉬된 상황과 동일하므로 해당 브랜치가 삭제될 수 있도록 해줍니다. 
+
+![1582779036065](../../assets/images/1582779036065.png){: .align-center}
+
+이상 github을 통한 협업 방식을 익혀보았습니다.
+
+
 
 
 
