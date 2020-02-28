@@ -157,13 +157,13 @@ JPA사용할 때 querydsl도 같이 사용할 것이고 이에 따라서 reposit
 
 그 전에 하나의 repository 에서 어떻게 JpaRepository의 기능과 querydsl에서 정의한 메소드를 사용할 수 있는지에 대한 전체적인 그림을 보겠다. 
 
-![jpa-repository](../../assets/images/evernote2git/jpa-repository.png)
+![jpa-repository](../../assets/images/evernote2git/jpa-repository.png){: .align-center}
 
 
 
 해당 작업을 위한 디렉토리구조는 다음과 같다.
 
-![jpa-repository](../../assets/images/evernote2git/jpa-repository-2.png)
+![jpa-repository](../../assets/images/evernote2git/jpa-repository-2.png){: .align-center}
 
 ```java
 com/ 
