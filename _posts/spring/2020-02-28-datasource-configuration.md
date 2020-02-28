@@ -7,10 +7,10 @@ header:
   teaser: /assets/images/spring.png
 
 categories:
-  - blog
+  - spring
 tags:
-  - window
-  - tip
+  - spring
+  - jpa
 last_modified_at: 2020-02-28T13:50:00-05:00
 ---
 
@@ -26,7 +26,7 @@ last_modified_at: 2020-02-28T13:50:00-05:00
 
 ### 디렉토리 구조
 
-![database-config-directory](../../assets/images/evernote2git/database-config-directory.png)
+![database-config-directory](../../assets/images/evernote2git/database-config-directory.png){: .align-center}
 
 
 

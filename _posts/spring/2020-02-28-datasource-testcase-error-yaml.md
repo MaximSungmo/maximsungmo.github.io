@@ -7,11 +7,10 @@ header:
   teaser: /assets/images/spring.png
 
 categories:
-  - blog
+  - spring
 tags:
-  - window
-  - tip
-last_modified_at: 2020-02-28T14:00:00-05:00
+  - spring
+last_modified_at: 2020-02-28T18:00:00-05:00
 ---
 
 ## 상황 
