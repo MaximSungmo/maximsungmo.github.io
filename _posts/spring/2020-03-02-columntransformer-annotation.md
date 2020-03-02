@@ -14,7 +14,7 @@ tags:
 last_modified_at: 2020-03-02T10:00:00-05:00
 ---
 
-## Java application을 통한 암복호화 방법
+## 여러 방법을 통한 암복호화 방법
 
 DB단에서 암복호화가 이루어지는 경우에 Java application에서 어떻게 처리할 수 있을까?
 
