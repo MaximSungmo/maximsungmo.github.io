@@ -1,0 +1,171 @@
+import com.fasterxml.jackson.annotation.JsonFormat
+import com.intellij.database.model.DasTable
+import com.intellij.database.util.Case
+import com.intellij.database.util.DasUtil
+
+/*
+* Available context bindings:
+*   SELECTION   Iterable<DasObject>
+*   PROJECT     project
+*   FILES       files helper
+*/
+
+packageName = "com.cafe24.cmc.springboot;"
+typeMapping = [
+        (~/(?i)int|smallint|integer/)     : "Integer",
+        (~/(?i)float|double|decimal|real/): "double",
+        (~/(?i)datetime|timestamp/)       : "LocalDateTime",
+        (~/(?i)date/)                     : "LocalDate",
+        (~/(?i)boolean/)                  : "boolean",
+        (~/(?i)/)                         : "String"
+
+]
+
+FILES.chooseDirectoryAndSave("Choose directory", "Choose where to store generated files") { dir ->
+  SELECTION.filter { it instanceof DasTable }.each { generate(it, dir) }
+}
+
+def generate(table, dir) {
+  def tableName = table.getName()
+  def className = javaName(tableName, true)
+  def fields = calcFields(table)
+  def hasIdClass = hasMultipleId(fields)
+  def packageNameCustom = dir.absolutePath.split("\\\\src\\\\main\\\\java\\\\")[-1].replaceAll("\\\\",".")
+  if(hasIdClass){
+    new File(dir, className + "Id.java").withPrintWriter { out -> generateIdClass(out, className, fields, packageNameCustom) }
+  }
+  new File(dir, className + ".java").withPrintWriter { out -> generate(dir, out, tableName, className, fields, packageNameCustom, hasIdClass) }
+  new File(dir, className + "Repo.java").withPrintWriter { out -> generateRepo(out, tableName, className, fields, packageNameCustom, hasIdClass) }
+
+}
+
+def hasMultipleId(fields){
+  def count = 0
+  fields.each() {
+    if(it.primary == true)
+      count++
+  }
+  return count > 1
+}
+
+def generate(dir, out, tableName, className, fields, packageNameCustom, hasIdClass) {
+  out.println "package $packageNameCustom;"
+  out.println ""
+  out.println "import lombok.Data;"
+  out.println "import lombok.NoArgsConstructor;"
+  out.println ""
+  out.println "import javax.persistence.*;"
+  out.println "import java.time.LocalDateTime;"
+  out.println "import java.time.LocalDate;"
+  out.println "import com.fasterxml.jackson.annotation.JsonFormat;"
+  out.println "import org.hibernate.annotations.CreationTimestamp;"
+  out.println "import org.hibernate.annotations.UpdateTimestamp;"
+  out.println ""
+  out.println "@NoArgsConstructor"
+  out.println "@Data"
+  out.println "@Entity"
+  out.println "@Table(name = \"$tableName\")"
+  if(hasIdClass) {
+    def idClassName = className + "Id"
+    out.println "@IdClass(${idClassName}.class)"
+  }
+  out.println "public class $className" + " {"
+  out.println ""
+  fields.each() {
+    if (it.comment != "")  out.println "    /*** ${it.comment} */"
+    if (it.primary == true) {
+      out.println "    @Id"
+    }
+    if (it.name =="insertTime" || it.name =="deleteTime" || it.name == "updateTime") {
+      switch (it.name) {
+        case "insertTime":
+          out.println "    @Column(updatable = false)"
+          out.println "    @CreationTimestamp"
+          break;
+        case "updateTime" :
+          out.println "    @UpdateTimestamp"
+          break;
+      }
+      out.println "    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = \"yyyy-MM-dd HH:mm:ss\", timezone = \"Asia/Seoul\")"
+      out.println "    private LocalDateTime ${it.name};"
+    } else if(it.name =="insertDate" || it.name =="deleteDate" || it.name == "updateDate") {
+      switch (it.name) {
+        case "insertDate":
+          out.println "    @Column(updatable = false)"
+          out.println "    @CreationTimestamp"
+          break;
+        case "updateDate" :
+          out.println "    @UpdateTimestamp"
+          break;
+      }
+      out.println "    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = \"yyyy-MM-dd\", timezone = \"Asia/Seoul\")"
+      out.println "    private LocalDate ${it.name};"
+    } else {
+      out.println "    private ${it.type} ${it.name};"
+    }
+    out.println ""
+  }
+  out.println ""
+  out.println "}"
+}
+
+def generateRepo(out, tableName, className, fields, packageNameCustom, hasIdClass) {
+  out.println "package $packageNameCustom;"
+  out.println ""
+  out.println "import org.springframework.stereotype.Repository;"
+  out.println "import org.springframework.data.jpa.repository.JpaRepository;"
+  out.println ""
+  out.println "@Repository"
+  def idType = "String"
+  if(hasIdClass) {
+    idType = className + "Id"
+  } else {
+    fields.each() {
+      if(it.primary) idType = it.type
+    }
+  }
+  out.println "public interface ${className}Repo extends JpaRepository<$className, ${idType}> {"
+  out.println ""
+  out.println ""
+  out.println "}"
+}
+
+def generateIdClass(out, className, fields, packageNameCustom) {
+  out.println "package $packageNameCustom;"
+  out.println ""
+  out.println "import lombok.Data;"
+  out.println "import java.io.Serializable;"
+  out.println ""
+  out.println "@Data"
+  out.println "public class ${className}Id implements Serializable {"
+  fields.each() {
+    if (it.primary == true) {
+      out.println "    private ${it.type} ${it.name};"
+      out.println ""
+    }
+  }
+  out.println "}"
+}
+
+def calcFields(table) {
+  DasUtil.getColumns(table).reduce([]) { fields, col ->
+    def spec = Case.LOWER.apply(col.getDataType().getSpecification())
+    def typeStr = typeMapping.find { p, t -> p.matcher(spec).find() }.value
+    fields += [[
+                       name : javaName(col.getName(), false),
+                       oriName : col.getName(),
+                       type : typeStr,
+                       spec : spec,
+                       comment : col.getComment(),
+                       primary : DasUtil.isPrimary(col),
+               ]]
+  }
+}
+
+def javaName(str, capitalize) {
+  def s = com.intellij.psi.codeStyle.NameUtil.splitNameIntoWords(str)
+          .collect { Case.LOWER.apply(it).capitalize() }
+          .join("")
+          .replaceAll(/[^\p{javaJavaIdentifierPart}[_]]/, "_")
+  capitalize || s.length() == 1? s : Case.LOWER.apply(s[0]) + s[1..-1]
+}
