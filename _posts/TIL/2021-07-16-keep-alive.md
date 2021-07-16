@@ -1,6 +1,6 @@
 ---
-title:  "[TIL] HTTP 요청과 응답 과정"
-excerpt: "www.naver.com 접속 시 어떤 일들이 일어날까? HTTP의 요청과 응답"
+title:  "[TIL] HTTP의 connectless 를 보완하기 위한 keep-alive"
+excerpt: "HTTP 특징 중 비연결성(connectless)를 보완하기 위한 기술"
 toc: true
 toc_sticky: true
 header:

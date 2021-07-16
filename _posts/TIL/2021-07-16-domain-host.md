@@ -1,6 +1,6 @@
 ---
-title:  "[TIL] HTTP 요청과 응답 과정"
-excerpt: "www.naver.com 접속 시 어떤 일들이 일어날까? HTTP의 요청과 응답"
+title:  "[TIL] 도메인과 호스트란? 차이점은?"
+excerpt: "도메인? 호스트? 헷갈리네"
 toc: true
 toc_sticky: true
 header:

@@ -1,6 +1,6 @@
 ---
-title:  "[TIL] HTTP 요청과 응답 과정"
-excerpt: "www.naver.com 접속 시 어떤 일들이 일어날까? HTTP의 요청과 응답"
+title:  "[TIL] HTTP Method 종류에 대해 알아보자"
+excerpt: "올바른 HTTP Method를 사용하자."
 toc: true
 toc_sticky: true
 header:

@@ -1,5 +1,5 @@
 ---
-title:  "[TIL] HTTP Status code"
+title:  "[TIL] HTTP Status Code 종류에 대해 알아보자"
 excerpt: "흔히 쓰이는 HTTP Status code"
 toc: true
 toc_sticky: true
