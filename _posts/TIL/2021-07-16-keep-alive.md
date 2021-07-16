@@ -1,5 +1,5 @@
 ---
-title:  "[TIL] HTTP의 connectless 를 보완하기 위한 keep-alive"
+title:  "[TIL] HTTP의 비연결성(connectless) 를 보완하기 위한 keep-alive"
 excerpt: "HTTP 특징 중 비연결성(connectless)를 보완하기 위한 기술"
 toc: true
 toc_sticky: true
