@@ -49,7 +49,7 @@ www.naver.com
 
 위와 같은 정보를 URI(Uniform Resource Identifier, URI) 또는 URL(Uniform Resource Locator) 이라고 한다.
 
-> [URI, URL, URN 에 대한 혼동이 있다면!](https://maximsungmo.github.io/til/url-uri-urn/)
+[URI, URL, URN 에 대한 혼동이 있다면!](https://maximsungmo.github.io/til/url-uri-urn/)
 
 
  
@@ -65,7 +65,7 @@ IP (예: 192.168.2.10) 는 쉽게 기억하기가 어려워서 [www.naver.com](h
 
 따라서 우리는 쉽게 [www.naver.com](http://www.naver.com) 라는 Domain Name 만으로 컴퓨터가 네트워크상에 가지고 있는 고유한 주소에 접근할 수 있게 되는 것이다. (이 때  Domain Name ↔ IP 를 변환하는 작업에서 DNS 서버가 있다. ) 
 
-> [도메인과 호스트란? 차이점은?](https://maximsungmo.github.io/til/domain-host/)
+[도메인과 호스트란? 차이점은?](https://maximsungmo.github.io/til/domain-host/)
 
 
 **그럼 브라우저는 [www.naver.com](http://www.naver.com) 이라는 주소를 입력하면 해당 Domain Name 을 갖고 있는 IP 를 찾아서 자료를 요청하게 된다.**
@@ -188,10 +188,10 @@ Content-Type: application/json; charset=utf-8
 
 위의 예제는 GET Method 에 HTTP Status Code 가 200 OK 로 응답되었다. 다른 것들은 무엇이 있는지에 대해서는 다음의 링크를 통해서 확인하자.
 
-> [HTTP Status Code 종류에 대해 알아보자](https://maximsungmo.github.io/til/http-status-code/)
+[HTTP Status Code 종류에 대해 알아보자](https://maximsungmo.github.io/til/http-status-code/)
 
 
-> [HTTP Method 종류에 대해 알아보자](https://maximsungmo.github.io/til/http-method/)
+[HTTP Method 종류에 대해 알아보자](https://maximsungmo.github.io/til/http-method/)
 
 
 자, 그러면 클라이언트(브라우저)가 웹서버에게 요청하고 응답하는 과정에서 HTTP가 갖는 특징은 무엇일까? 
@@ -226,7 +226,7 @@ Connection : keep-alive
 
 HTTP의 비연결성(connectless) 를 보완하기 위한 keep-alive에 대해서 좀 더 알고싶다면 아래 링크로!
 
-> [HTTP의 connectless 를 보완하기 위한 keep-alive]((https://maximsungmo.github.io/til/keep-alive/))
+[HTTP의 connectless 를 보완하기 위한 keep-alive]((https://maximsungmo.github.io/til/keep-alive/))
 
 
 **세 번째, 무상태성(Stateless)**
@@ -241,7 +241,7 @@ HTTP 특징으로는 이 전의 정보나 현재 통신의 상태가 남아 있�
 
 많이 들어봤을 또는 사용했을 쿠키, 세션, 토큰등의 방식으로 클라이언트의 상태를 유지시킬 수 있는 것이다. 
 
-> [무상태성을 보완하기 위한 방법은 여기로!](https://maximsungmo.github.io/til/remember-state)
+[무상태성을 보완하기 위한 방법은 여기로!](https://maximsungmo.github.io/til/remember-state)
 
 
 ## 참고 자료
