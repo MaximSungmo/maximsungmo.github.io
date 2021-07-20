@@ -18,7 +18,7 @@ last_modified_at: 2020-02-21T08:00:00-05:00
 
 ## GCP 에서 GIT 확인
 
-![image-20200310221731626](../../assets/images/2020-03-10-gcp-git-install/image-20200310221731626.png)
+![image-20200310221731626](assets/images/2020-03-10-gcp-git-install/image-20200310221731626.png)
 
 ```
 git 
