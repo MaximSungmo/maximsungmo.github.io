@@ -59,6 +59,10 @@ Mybatis를 사용할 때 파라미터로 넘어온 값을 쿼리에 넣어줄 �
 
 \#{} 는 사용상 주의가 필요하다.
 
+## 테스트 작업
+
+[Mybatis 로 SQL Injection Test](https://maximsungmo.github.io/spring/mybatis_sql_injection_test/)
+
 --- 
 
 Reference
