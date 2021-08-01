@@ -9,7 +9,7 @@ header:
 categories:
   - TIL
 tags:
-  - mybatis
+  - java
 last_modified_at: 2021-07-30T08:00:00-05:00
 ---
 
